@@ -1,0 +1,27 @@
+[project]
+name = "web-enhanced-llm"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = [
+    "transformers>=4.41.1",
+    "torch>=2.3.0",
+    "flask>=3.0.3",
+    "requests>=2.32.2",
+    "beautifulsoup4>=4.12.3",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/web_enhanced_llm"]
